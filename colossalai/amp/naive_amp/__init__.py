@@ -4,7 +4,7 @@ from torch.optim import Optimizer
 from colossalai.utils import is_no_pp_or_last_stage
 from .naive_amp import NaiveAMPOptimizer, NaiveAMPModel
 from .grad_scaler import DynamicGradScaler, ConstantGradScaler
-from _fp16_optimizer import FP16Optimizer
+from ._fp16_optimizer import FP16Optimizer
 
 
 def convert_to_naive_amp(model: nn.Module, optimizer: Optimizer, amp_config):
